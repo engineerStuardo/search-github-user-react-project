@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
 
-import { GithubContext } from '../context/context';
+import { useGlobalContext } from '../context/context';
 
 const Repos = () => {
   return <h2>repos component</h2>;
