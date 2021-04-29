@@ -6,6 +6,9 @@ import { FiUsers, FiUserPlus } from 'react-icons/fi';
 import { useGlobalContext } from '../context/context';
 
 const UserInfo = () => {
+  const data = useGlobalContext();
+  console.log(data);
+
   return <h2>user info component</h2>;
 };
 
