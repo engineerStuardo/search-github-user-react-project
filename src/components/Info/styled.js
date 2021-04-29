@@ -1,21 +1,10 @@
-import React from 'react';
 import styled from 'styled-components';
-import { GoRepo, GoGist } from 'react-icons/go';
-import { FiUsers, FiUserPlus } from 'react-icons/fi';
 
-import { useGlobalContext } from '../context/context';
-
-const UserInfo = () => {
-  const data = useGlobalContext();
-  console.log(data);
-
-  return <h2>user info component</h2>;
-};
-
-const Wrapper = styled.section`
+export const Wrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem 2rem;
+
   @media (min-width: 640px) {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   }
@@ -63,5 +52,3 @@ const Wrapper = styled.section`
     }
   }
 `;
-
-export default UserInfo;
