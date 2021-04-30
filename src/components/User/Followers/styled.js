@@ -1,13 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-import { useGlobalContext } from '../context/context';
-
-const Followers = () => {
-  return <h2>followers component</h2>;
-};
-
-const Wrapper = styled.article`
+export const Wrapper = styled.article`
   background: var(--clr-white);
   border-top-right-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
@@ -59,4 +52,3 @@ const Wrapper = styled.article`
     }
   }
 `;
-export default Followers;

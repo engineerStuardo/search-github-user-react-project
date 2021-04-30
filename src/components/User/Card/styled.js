@@ -1,13 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import { MdBusiness, MdLocationOn, MdLink } from 'react-icons/md';
 
-import { useGlobalContext } from '../context/context';
-
-const Card = () => {
-  return <h2>card component</h2>;
-};
-const Wrapper = styled.article`
+export const Wrapper = styled.article`
   background: var(--clr-white);
   padding: 1.5rem 2rem;
   border-top-right-radius: var(--radius);
@@ -87,4 +80,3 @@ const Wrapper = styled.article`
     }
   }
 `;
-export default Card;
