@@ -9,16 +9,16 @@ import { dataColumnAndBarChart } from '../utils';
 
 const Repos = () => {
   const { repos } = useGlobalContext();
-  const { pie, doughnut } = dataPieAndDoughnutChart(repos);
-  const { column, bar } = dataColumnAndBarChart(repos);
+  const { pieData, doughnutData } = dataPieAndDoughnutChart(repos);
+  const { columnData, barData } = dataColumnAndBarChart(repos);
 
   return (
     <section className='section'>
       <Wrapper className='section-center'>
-        <Pie3D data={pie} />
-        <Column3D data={column} />
-        <Doughnut2D data={doughnut} />
-        <Bar3D data={bar} />
+        <Pie3D data={pieData} />
+        <Column3D data={columnData} />
+        <Doughnut2D data={doughnutData} />
+        <Bar3D data={barData} />
       </Wrapper>
     </section>
   );

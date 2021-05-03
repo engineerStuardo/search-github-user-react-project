@@ -34,10 +34,10 @@ export const dataPieAndDoughnutChart = repos => {
     return total;
   }, {});
 
-  const pie = convertToArray(languages, 'pie');
-  const doughnut = convertToArray(languages, 'doughnut');
+  const pieData = convertToArray(languages, 'pie');
+  const doughnutData = convertToArray(languages, 'doughnut');
 
-  return { pie, doughnut };
+  return { pieData, doughnutData };
 };
 
 export const dataColumnAndBarChart = repos => {
@@ -50,8 +50,8 @@ export const dataColumnAndBarChart = repos => {
     { stars: {}, forks: {} }
   );
 
-  const column = convertToArray(stars, 'columnAndBar');
-  const bar = convertToArray(forks, 'columnAndBar');
+  const columnData = convertToArray(stars, 'columnAndBar');
+  const barData = convertToArray(forks, 'columnAndBar');
 
-  return { column, bar };
+  return { columnData, barData };
 };
