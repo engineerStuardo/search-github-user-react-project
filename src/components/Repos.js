@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
 
 import { useGlobalContext } from '../context/context';
@@ -18,7 +19,7 @@ const Repos = () => {
     }
     return total;
   }, {});
-  console.log(languages);
+
   languages = Object.values(languages)
     .sort((a, b) => {
       return b.value - a.value;
@@ -28,7 +29,6 @@ const Repos = () => {
   return (
     <section className='section'>
       <Wrapper className='section-center'>
-        {/* <ExampleChart data={chartData} /> */}
         <Pie3D data={languages} />
       </Wrapper>
     </section>
