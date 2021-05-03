@@ -1,5 +1,5 @@
 import Info from "./Info/Info.jsx";
-import Repos from "./Repos";
+import Repos from "./Repos/Repos.jsx";
 import User from "./User/User";
 import Search from "./Search";
 import Navbar from "./Navbar";
