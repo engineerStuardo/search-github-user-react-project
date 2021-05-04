@@ -1,13 +1,15 @@
 const convertToArray = (object, type) => {
+  const newArr = Object.values(object);
+
   if (type === 'pie')
-    return Object.values(object)
+    return newArr
       .sort((a, b) => {
         return b.value - a.value;
       })
       .slice(0, 5);
 
   if (type === 'doughnut')
-    return Object.values(object)
+    return newArr
       .sort((a, b) => {
         return b.stars - a.stars;
       })
@@ -16,7 +18,7 @@ const convertToArray = (object, type) => {
       })
       .slice(0, 5);
 
-  if (type === 'columnAndBar') return Object.values(object).slice(-5).reverse();
+  if (type === 'columnAndBar') return newArr.slice(-5).reverse();
 };
 
 export const dataPieAndDoughnutChart = repos => {
