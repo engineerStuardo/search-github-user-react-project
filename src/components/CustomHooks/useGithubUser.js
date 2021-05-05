@@ -71,6 +71,7 @@ const useGithubUser = () => {
 
   useEffect(() => {
     checkRequest();
+    // eslint-disable-next-line
   }, []);
 
   return {

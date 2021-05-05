@@ -5,19 +5,21 @@ import { Dashboard, Login, PrivateRoute, AuthWrapper, Error } from './pages';
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/'>
-          <Dashboard></Dashboard>
-        </Route>
-        <Route path='/login'>
-          <Login />
-        </Route>
-        <Route path='*'>
-          <Error />
-        </Route>
-      </Switch>
-    </Router>
+    <AuthWrapper>
+      <Router>
+        <Switch>
+          <PrivateRoute exact path='/'>
+            <Dashboard />
+          </PrivateRoute>
+          <Route path='/login'>
+            <Login />
+          </Route>
+          <Route path='*'>
+            <Error />
+          </Route>
+        </Switch>
+      </Router>
+    </AuthWrapper>
   );
 };
 
