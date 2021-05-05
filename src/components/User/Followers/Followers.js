@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { useGlobalContext } from '../../../context/context';
+import { GithubContext } from '../../../context/context';
+import useGlobalContext from '../../CustomHooks/useGlobalContext';
+
 import { Wrapper } from './styled';
 
 const Followers = () => {
-  const { followers } = useGlobalContext();
+  const { followers } = useGlobalContext(GithubContext);
 
   return (
     <Wrapper>

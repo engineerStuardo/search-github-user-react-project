@@ -2,10 +2,11 @@ import React from 'react';
 
 import { Info, Repos, User, Search, Navbar } from '../../components';
 import loadingImage from '../../images/preloader.gif';
-import { useGlobalContext } from '../../context/context';
+import { GithubContext } from '../../context/context';
+import useGlobalContext from '../../components/CustomHooks/useGlobalContext';
 
 const Dashboard = () => {
-  const { loading } = useGlobalContext();
+  const { loading } = useGlobalContext(GithubContext);
 
   if (loading) {
     return (

@@ -1,11 +1,12 @@
 import React from 'react';
 import { MdBusiness, MdLocationOn, MdLink } from 'react-icons/md';
 
-import { useGlobalContext } from '../../../context/context';
+import { GithubContext } from '../../../context/context';
+import useGlobalContext from '../../CustomHooks/useGlobalContext';
 import { Wrapper } from './styled';
 
 const Card = () => {
-  const { githubUser } = useGlobalContext();
+  const { githubUser } = useGlobalContext(GithubContext);
   const {
     avatar_url,
     html_url,

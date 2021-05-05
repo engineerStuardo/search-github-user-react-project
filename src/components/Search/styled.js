@@ -1,49 +1,6 @@
-import React, { useState } from 'react';
 import styled from 'styled-components';
-import { MdSearch } from 'react-icons/md';
 
-import { useGlobalContext } from '../context/context';
-
-const Search = () => {
-  const { request, error, searchGithubUser, loading } = useGlobalContext();
-
-  const [user, setUser] = useState('');
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    if (user) {
-      searchGithubUser(user);
-      setUser('');
-    }
-  };
-
-  return (
-    <section className='section'>
-      <Wrapper className='section-center'>
-        {error.show && (
-          <ErrorWrapper>
-            <p>{error.msg}</p>
-          </ErrorWrapper>
-        )}
-        <form onSubmit={handleSubmit}>
-          <div className='form-control'>
-            <MdSearch />
-            <input
-              type='text'
-              placeholder='enter github user'
-              value={user}
-              onChange={e => setUser(e.target.value)}
-            />
-            {request > 0 && !loading && <button type='submit'>search</button>}
-          </div>
-        </form>
-        <h3>request: {request}/60</h3>
-      </Wrapper>
-    </section>
-  );
-};
-
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   position: relative;
   display: grid;
   gap: 1rem 1.75rem;
@@ -112,7 +69,8 @@ const Wrapper = styled.div`
     font-weight: 400;
   }
 `;
-const ErrorWrapper = styled.article`
+
+export const ErrorWrapper = styled.article`
   position: absolute;
   width: 90vw;
   top: 0;
@@ -124,4 +82,3 @@ const ErrorWrapper = styled.article`
     letter-spacing: var(--spacing);
   }
 `;
-export default Search;

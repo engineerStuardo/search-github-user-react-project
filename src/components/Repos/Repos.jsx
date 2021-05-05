@@ -3,12 +3,13 @@ import React from 'react';
 import { Pie3D, Column3D, Bar3D, Doughnut2D } from '../Charts';
 
 import { Wrapper } from './styled';
-import { useGlobalContext } from '../../context/context';
 import { dataPieAndDoughnutChart } from '../utils';
 import { dataColumnAndBarChart } from '../utils';
+import { GithubContext } from '../../context/context';
+import useGlobalContext from '../CustomHooks/useGlobalContext';
 
 const Repos = () => {
-  const { repos } = useGlobalContext();
+  const { repos } = useGlobalContext(GithubContext);
   const { pieData, doughnutData } = dataPieAndDoughnutChart(repos);
   const { columnData, barData } = dataColumnAndBarChart(repos);
 

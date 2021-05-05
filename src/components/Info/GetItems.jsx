@@ -2,10 +2,11 @@ import React from 'react';
 import { GoRepo, GoGist } from 'react-icons/go';
 import { FiUsers, FiUserPlus } from 'react-icons/fi';
 
-import { useGlobalContext } from '../../context/context';
+import { GithubContext } from '../../context/context';
+import useGlobalContext from '../CustomHooks/useGlobalContext';
 
 export const GetItems = () => {
-  const { githubUser } = useGlobalContext();
+  const { githubUser } = useGlobalContext(GithubContext);
   const { public_repos, followers, following, public_gists } = githubUser;
   const items = [
     {
